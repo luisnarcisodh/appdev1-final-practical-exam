@@ -1,29 +1,36 @@
-.pageContainer {
+.container {
   display: flex;
   min-height: 100vh;
-  width: 100%;
-  font-family: sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
 }
 
 .leftSection {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  background-color: #ffffff;
+  justify-content: center; /* Centers the content vertically */
+  padding: 2rem 10%; /* Provides spacing similar to the Figma design */
+  max-width: 600px;
 }
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+}
+
 .rightSection {
   flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.blossomImage {
-  max-width: 90%;
+.image {
+  max-width: 100%;
   max-height: 90vh;
   object-fit: contain;
 }

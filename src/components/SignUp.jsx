@@ -1,24 +1,25 @@
 import React from 'react';
 import styles from './SignUp.module.css';
-import blossomImg from "../assets/blossom-flower.svg";
+// I-import yung image (i-adjust ang '../' depende kung gaano kalalim yung SignUp.jsx file mo)
+import blossomFlower from '../assets/blossom-flower.svg'; 
 
-const SignUp = () => {
+export default function SignUp() {
   return (
-    <div className={styles.pageContainer}>
-      {/* Left Section: Empty for now */}
+    <div className={styles.container}>
+      {/* Left Section */}
       <div className={styles.leftSection}>
+        <h1 className={styles.title}>Get Started Now</h1>
       </div>
 
-      {/* Right Section: Blossom Image */}
+      {/* Right Section */}
       <div className={styles.rightSection}>
+        {/* Gamitin yung na-import na variable */}
         <img 
-          src={blossomImg} 
-          alt="Blossom" 
-          className={styles.blossomImage} 
+          src={blossomFlower} 
+          alt="Botanical flowers" 
+          className={styles.image} 
         />
       </div>
     </div>
   );
-};
-
-export default SignUp;
+}
