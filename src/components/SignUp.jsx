@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './SignUp.module.css';
 import blossomFlower from '../assets/blossom-flower.svg'; 
-// In-import natin yung mga logos mula sa assets folder
 import googleLogo from '../assets/icons-google-logo.svg';
 import appleLogo from '../assets/icons-apple-logo.svg';
+// Import the shadcn/ui Input component
+import { Input } from "./ui/input";
 
 export default function SignUp() {
   return (
@@ -16,7 +17,8 @@ export default function SignUp() {
         <form className={styles.form}>
           <div className={styles.inputGroup}>
             <label className={styles.label} htmlFor="name">Name</label>
-            <input 
+            {/* Replaced standard input with shadcn Input */}
+            <Input 
               className={styles.input} 
               type="text" 
               id="name" 
@@ -26,7 +28,7 @@ export default function SignUp() {
           
           <div className={styles.inputGroup}>
             <label className={styles.label} htmlFor="email">Email address</label>
-            <input 
+            <Input 
               className={styles.input} 
               type="email" 
               id="email" 
@@ -36,7 +38,7 @@ export default function SignUp() {
           
           <div className={styles.inputGroup}>
             <label className={styles.label} htmlFor="password">Password</label>
-            <input 
+            <Input 
               className={styles.input} 
               type="password" 
               id="password" 
@@ -47,7 +49,7 @@ export default function SignUp() {
           <div className={styles.checkboxGroup}>
             <input type="checkbox" id="terms" className={styles.checkbox} />
             <label htmlFor="terms" className={styles.checkboxLabel}>
-              I agree to the terms & policy
+              I agree to the <u>terms & policy</u>
             </label>
           </div>
           
@@ -56,19 +58,17 @@ export default function SignUp() {
           </button>
         </form>
 
-        {/* Part 3: Divider and Bottom Section */}
+        {/* Divider and Bottom Section */}
         <div className={styles.divider}>
           <span>Or</span>
         </div>
 
         <div className={styles.socialGroup}>
           <button type="button" className={styles.socialButton}>
-            {/* Ginamit ang in-import na googleLogo */}
             <img src={googleLogo} alt="Google" className={styles.socialIcon} />
             Sign in with Google
           </button>
           <button type="button" className={styles.socialButton}>
-            {/* Ginamit ang in-import na appleLogo */}
             <img src={appleLogo} alt="Apple" className={styles.socialIcon} />
             Sign in with Apple
           </button>
