@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 .container {
   display: flex;
   min-height: 100vh;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
 }
 
@@ -9,16 +11,20 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers the content vertically */
-  padding: 2rem 10%; /* Provides spacing similar to the Figma design */
+  justify-content: center;
+  align-items: flex-start; /* Eto yung magdidikit sa kanila lahat sa kaliwang gilid */
+  padding-left: 10%; /* Inayos ang spacing para nasa gilid talaga */
+  padding-right: 2rem;
   max-width: 600px;
 }
 
+/* get starterted - poppins medium 32 */
 .title {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 500; 
   color: #000000;
   margin: 0;
+  text-align: left; /* Siguradong left-aligned */
 }
 
 .rightSection {
@@ -33,4 +39,89 @@
   max-width: 100%;
   max-height: 90vh;
   object-fit: contain;
+}
+
+.form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start; /* Left aligned ang label at textbox */
+}
+
+/* name - poppins medium 14 */
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* enter your name - poppins medium 10 */
+.input {
+  width: 100%; /* Para sakop buong width ng form */
+  padding: 10px 12px;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ffffff; /* White background */
+  outline: none;
+}
+
+/* Eto yung light gray na text ng placeholder sa loob */
+.input::placeholder {
+  color: #C4C4C4; 
+  font-weight: 400;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.checkbox {
+  width: 11px;
+  height: 11px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #3b5c2a;
+}
+
+/* I agree to the terms & policy - poppins medium 9 */
+.checkboxLabel {
+  font-size: 9px;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+}
+
+.checkboxLabel u {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* signup - poppins bold 13 */
+.submitButton {
+  width: 100%; /* Para kasing-haba siya ng textboxes */
+  background-color: #3f602f;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 8px;
 }
