@@ -13,7 +13,7 @@ export default function Login() {
         <h1 className={styles.title}>Welcome back!</h1>
         <p className={styles.subtitle}>Enter your Credentials to access your account</p>
         
-        {/* Form Starts Here - Updated for Login */}
+        {/* Form Starts Here */}
         <form className={styles.form}>
           <div className={styles.inputGroup}>
             <label className={styles.label} htmlFor="email">Email address</label>
@@ -26,7 +26,6 @@ export default function Login() {
           </div>
           
           <div className={styles.inputGroup}>
-            {/* Added passwordHeader for the forgot password link */}
             <div className={styles.passwordHeader}>
               <label className={styles.label} htmlFor="password">Password</label>
               <a href="#" className={styles.forgotPassword}>Forgot password?</a>
@@ -67,8 +66,9 @@ export default function Login() {
           </button>
         </div>
 
+        {/* Part 3: Bottom Text Updated */}
         <p className={styles.bottomText}>
-          Have an account? <a href="/login" className={styles.link}>Sign In</a>
+          Don’t have an account? <a href="/signup" className={styles.link}>Sign Up</a>
         </p>
       </div>
 
