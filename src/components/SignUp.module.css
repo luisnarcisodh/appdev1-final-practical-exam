@@ -1,0 +1,29 @@
+.pageContainer {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.leftSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+.rightSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.blossomImage {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+}
