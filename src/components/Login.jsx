@@ -1,15 +1,18 @@
 import React from 'react';
-import styles from './Login.module.css'; // Updated import
+import styles from './Login.module.css'; 
 import blossomFlower from '../assets/blossom-flower.svg'; 
 import googleLogo from '../assets/icons-google-logo.svg';
 import appleLogo from '../assets/icons-apple-logo.svg';
 
-export default function Login() { // Updated component name
+export default function Login() {
   return (
     <div className={styles.container}>
       {/* Left Section */}
       <div className={styles.leftSection}>
-        <h1 className={styles.title}>Get Started Now</h1>
+        
+        {/* Part 1: Title & Subtitle Updated */}
+        <h1 className={styles.title}>Welcome back!</h1>
+        <p className={styles.subtitle}>Enter your Credentials to access your account</p>
         
         {/* Form Starts Here */}
         <form className={styles.form}>
@@ -55,7 +58,7 @@ export default function Login() { // Updated component name
           </button>
         </form>
 
-        {/* Part 3: Divider and Bottom Section */}
+        {/* Divider and Bottom Section */}
         <div className={styles.divider}>
           <span>Or</span>
         </div>
