@@ -3,6 +3,8 @@ import styles from './Login.module.css';
 import blossomFlower from '../assets/blossom-flower.svg'; 
 import googleLogo from '../assets/icons-google-logo.svg';
 import appleLogo from '../assets/icons-apple-logo.svg';
+// Import the shadcn/ui Input component
+import { Input } from "./ui/input";
 
 export default function Login() {
   return (
@@ -17,7 +19,8 @@ export default function Login() {
         <form className={styles.form}>
           <div className={styles.inputGroup}>
             <label className={styles.label} htmlFor="email">Email address</label>
-            <input 
+            {/* Replaced standard input with shadcn Input */}
+            <Input 
               className={styles.input} 
               type="email" 
               id="email" 
@@ -30,7 +33,8 @@ export default function Login() {
               <label className={styles.label} htmlFor="password">Password</label>
               <a href="#" className={styles.forgotPassword}>Forgot password?</a>
             </div>
-            <input 
+            {/* Replaced standard input with shadcn Input */}
+            <Input 
               className={styles.input} 
               type="password" 
               id="password" 
@@ -66,7 +70,6 @@ export default function Login() {
           </button>
         </div>
 
-        {/* Part 3: Bottom Text Updated */}
         <p className={styles.bottomText}>
           Don’t have an account? <a href="/signup" className={styles.link}>Sign Up</a>
         </p>
