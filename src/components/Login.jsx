@@ -10,22 +10,11 @@ export default function Login() {
       {/* Left Section */}
       <div className={styles.leftSection}>
         
-        {/* Part 1: Title & Subtitle Updated */}
         <h1 className={styles.title}>Welcome back!</h1>
         <p className={styles.subtitle}>Enter your Credentials to access your account</p>
         
-        {/* Form Starts Here */}
+        {/* Form Starts Here - Updated for Login */}
         <form className={styles.form}>
-          <div className={styles.inputGroup}>
-            <label className={styles.label} htmlFor="name">Name</label>
-            <input 
-              className={styles.input} 
-              type="text" 
-              id="name" 
-              placeholder="Enter your name" 
-            />
-          </div>
-          
           <div className={styles.inputGroup}>
             <label className={styles.label} htmlFor="email">Email address</label>
             <input 
@@ -37,7 +26,11 @@ export default function Login() {
           </div>
           
           <div className={styles.inputGroup}>
-            <label className={styles.label} htmlFor="password">Password</label>
+            {/* Added passwordHeader for the forgot password link */}
+            <div className={styles.passwordHeader}>
+              <label className={styles.label} htmlFor="password">Password</label>
+              <a href="#" className={styles.forgotPassword}>Forgot password?</a>
+            </div>
             <input 
               className={styles.input} 
               type="password" 
@@ -47,14 +40,14 @@ export default function Login() {
           </div>
           
           <div className={styles.checkboxGroup}>
-            <input type="checkbox" id="terms" className={styles.checkbox} />
-            <label htmlFor="terms" className={styles.checkboxLabel}>
-              I agree to the terms & policy
+            <input type="checkbox" id="remember" className={styles.checkbox} />
+            <label htmlFor="remember" className={styles.checkboxLabel}>
+              Remember for 30 days
             </label>
           </div>
           
           <button type="submit" className={styles.submitButton}>
-            Signup
+            Login
           </button>
         </form>
 
