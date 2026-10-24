@@ -12,19 +12,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* Eto yung magdidikit sa kanila lahat sa kaliwang gilid */
-  padding-left: 10%; /* Inayos ang spacing para nasa gilid talaga */
+  align-items: flex-start;
+  padding-left: 10%;
   padding-right: 2rem;
   max-width: 600px;
 }
 
-/* get starterted - poppins medium 32 */
 .title {
   font-size: 32px;
   font-weight: 500; 
   color: #000000;
   margin: 0;
-  text-align: left; /* Siguradong left-aligned */
+  text-align: left;
 }
 
 .rightSection {
@@ -54,30 +53,27 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  align-items: flex-start; /* Left aligned ang label at textbox */
+  align-items: flex-start;
 }
 
-/* name - poppins medium 14 */
 .label {
   font-size: 14px;
   font-weight: 500;
   color: #000000;
 }
 
-/* enter your name - poppins medium 10 */
 .input {
-  width: 100%; /* Para sakop buong width ng form */
+  width: 100%;
   padding: 10px 12px;
   border: 1px solid #E2E8F0;
   border-radius: 6px;
   font-size: 10px;
   font-weight: 500;
   font-family: inherit;
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff;
   outline: none;
 }
 
-/* Eto yung light gray na text ng placeholder sa loob */
 .input::placeholder {
   color: #C4C4C4; 
   font-weight: 400;
@@ -98,7 +94,6 @@
   accent-color: #3b5c2a;
 }
 
-/* I agree to the terms & policy - poppins medium 9 */
 .checkboxLabel {
   font-size: 9px;
   font-weight: 500;
@@ -111,9 +106,8 @@
   text-underline-offset: 2px;
 }
 
-/* signup - poppins bold 13 */
 .submitButton {
-  width: 100%; /* Para kasing-haba siya ng textboxes */
+  width: 100%;
   background-color: #3f602f;
   color: #ffffff;
   padding: 12px;
@@ -124,4 +118,77 @@
   font-family: inherit;
   cursor: pointer;
   margin-top: 8px;
+}
+
+/* =========================================
+   PART 3: DIVIDER & BOTTOM SECTION STYLES
+   ========================================= */
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.divider span {
+  padding: 0 10px;
+  font-size: 9px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.socialGroup {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.socialButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: inherit;
+  color: #000000;
+  cursor: pointer;
+}
+
+.socialIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.bottomText {
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  width: 100%;
+  max-width: 360px;
+}
+
+.link {
+  color: #0056D2; 
+  text-decoration: none;
 }

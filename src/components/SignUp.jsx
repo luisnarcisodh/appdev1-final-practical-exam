@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './SignUp.module.css';
 import blossomFlower from '../assets/blossom-flower.svg'; 
+// In-import natin yung mga logos mula sa assets folder
+import googleLogo from '../assets/icons-google-logo.svg';
+import appleLogo from '../assets/icons-apple-logo.svg';
 
 export default function SignUp() {
   return (
@@ -52,6 +55,28 @@ export default function SignUp() {
             Signup
           </button>
         </form>
+
+        {/* Part 3: Divider and Bottom Section */}
+        <div className={styles.divider}>
+          <span>Or</span>
+        </div>
+
+        <div className={styles.socialGroup}>
+          <button type="button" className={styles.socialButton}>
+            {/* Ginamit ang in-import na googleLogo */}
+            <img src={googleLogo} alt="Google" className={styles.socialIcon} />
+            Sign in with Google
+          </button>
+          <button type="button" className={styles.socialButton}>
+            {/* Ginamit ang in-import na appleLogo */}
+            <img src={appleLogo} alt="Apple" className={styles.socialIcon} />
+            Sign in with Apple
+          </button>
+        </div>
+
+        <p className={styles.bottomText}>
+          Have an account? <a href="/login" className={styles.link}>Sign In</a>
+        </p>
       </div>
 
       {/* Right Section */}
